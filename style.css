@@ -1,0 +1,259 @@
+
+@font-face {
+    font-family: 'Padrao';
+    src: url(./font/PixeloidSans-JR6qo.ttf) format('truetype');
+    font-size: normal;
+    font-weight: normal;
+}
+
+:root{
+    --tema: rgb(35, 35, 35);
+    --cor: rgb(240, 240, 240);
+}
+
+*{
+    font-family: 'Padrao';
+    padding: 0px;
+    margin: 0px;
+    user-select: none;
+    color: var(--cor);
+    background-color: transparent;
+}
+
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--tema);
+}
+
+main{
+    width: 305px;
+    height: 490px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: transparent;
+    border-radius: 10px;
+    
+}
+
+#mudar-tema{
+    width: 25px;
+    height: 25px;
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background-color: var(--cor);
+    border-radius: 50%;
+    border: 1px solid black;
+}
+
+#header{
+    height: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+#pontos, #recorde{
+    height: 100%;
+    width: 35%;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#pontos p, #recorde p{
+    color: var(--cor);
+}
+
+#pontos{
+    margin-left: 10px;
+    color: var(--cor);
+}
+
+#monitor{
+    position: relative;
+    margin-top: 0;
+    width: 280px;
+    height: 420px;
+    display: grid;
+    grid-template-columns: repeat(20, 5%);
+    border-radius: 6px;
+    border: solid 1px black;
+}
+
+.play{
+    width: 14px;
+    height: 14px;
+    animation: efeito-play 3s linear infinite;
+}
+
+.apagado{
+    width: 14px;
+    height: 14px;
+    opacity: 0;
+}
+
+.cobra{
+    z-index: 4;
+    width: 14px;
+    height: 14px;
+    animation: gradiente-cobra 10s linear infinite;
+}
+
+.maça{
+    width: 14px;
+    height: 14px;
+    background-color: rgb(255, 0, 0);
+    animation: pulsar 2s linear infinite;
+    opacity: 1;
+}
+
+.gameover{
+    width: 14px;
+    height: 14px;
+    animation: efeito-game-over 6s linear infinite;
+}
+
+.zerar{
+    width: 14px;
+    height: 14px;
+    animation: efeito-zerar 3s linear infinite;
+}
+
+@keyframes efeito-play {
+    0%{
+        background-color: rgb(0, 0, 255);
+       
+    }
+
+    50%{
+        background-color: rgb(0, 160, 72);
+     
+    }
+
+    100%{
+        background-color: rgb(0, 0, 255);;
+       
+    }
+
+}
+
+@keyframes gradiente-cobra {
+    0%{
+        background-color: rgb(0, 192, 42);
+    }
+    
+    50%{
+        background-color: rgb(73, 255, 113);
+       
+    }
+
+    100%{
+        background-color: rgb(0, 192, 42);
+    }
+
+}
+
+@keyframes pulsar {
+    0%{
+        transform: scale(0.925);
+    }
+
+    50%{
+        transform: scale(0.7);
+    }
+
+    100%{
+        transform: scale(0.925);
+    }
+
+}
+
+@keyframes efeito-game-over {
+    0%{
+        background-color: rgb(251, 255, 0);
+    }
+
+    50%{
+        background-color: rgb(255, 0, 0);
+    }
+
+    100%{
+        background-color: rgb(251, 255, 0);
+    }
+
+}
+
+@keyframes efeito-zerar {
+    0%{
+        background-color: rgb(255, 0, 0);
+    }
+
+    50%{
+        background-color: rgb(160, 0, 93);
+     
+    }
+
+    100%{
+        background-color: rgb(255, 0, 0);
+    }
+
+}
+
+
+@media screen and (max-width: 500px){
+    body{
+        width: 100vw;
+        height: 85vh;
+    }
+
+    main{
+        width: 100%;
+        height: 100%;
+        border-radius: 0px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    #monitor{
+        position: relative;
+        margin-top: 0;
+        width: 100vw;
+        height: 150vw;
+        display: grid;
+        grid-template-columns: repeat(20, 5%);
+        border-bottom: 1px solid black;
+        border-top: 1px solid black;
+    }
+
+    .play, .apagado, .cobra, .maça, .gameover{
+        width: 5vw;
+        height: 5vw;
+    }
+
+    #header{
+        height: 5vh;
+    }
+    
+    #header{
+        font-size: 40px;
+    }
+
+    #header p{
+        font-size: 20px;
+    }
+
+    #header input{
+        font-size: 20px;
+    }
+   
+}
+    
