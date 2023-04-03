@@ -1,5 +1,5 @@
 # Snake-Game
-Welcome to the DRA Snake Game documentation!
+Welcome to the Snake Game documentation!
 
 This game is a reinterpretation of the classic Snake Game, where the goal is to make the snake grow by eating apples, but without colliding with the borders of the game or with its own body.
 
