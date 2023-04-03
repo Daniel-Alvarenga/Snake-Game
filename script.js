@@ -1,3 +1,14 @@
+var monitorDiv = document.getElementById("monitor");
+
+for (var i = 1; i <= 600; i++) {
+  var newPixel = document.createElement("div");
+  newPixel.className = "apagado";
+  newPixel.id = "pixel" + i;
+  newPixel.style.opacity = "1";
+
+  monitorDiv.appendChild(newPixel);
+}
+
 localStorage.setItem('recorde', 0);
 
 recorde = localStorage.getItem('recorde');
