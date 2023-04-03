@@ -282,7 +282,7 @@ function entrada_espaço(){
         velocidade = 0;
     }
 
-    else if(velocidade == 0 && inicio == 1){
+    else{
         musica.play();
         velocidade = 1;
     }
@@ -549,10 +549,10 @@ function  nova_maça(){
 
     ponto = valor_aleatorio;
     id_maça = "pixel" + ponto;
-    idSelecionado_maça= document.getElementById(id_maça);
+    idSelecionado_maca= document.getElementById(id_maça);
 
-    if(idSelecionado_maça.className == "apagado" && rastro_selecionado != ponto){
-        idSelecionado_maça.className = "maça";
+    if(idSelecionado_maca.className == "apagado" && rastro_selecionado != ponto){
+        idSelecionado_maca.className = "maça";
         verificacao_maça = 1;   
     }
 
